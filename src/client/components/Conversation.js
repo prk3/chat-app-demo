@@ -26,7 +26,7 @@ class Conversation extends React.Component {
 
   handleScroll(event) {
     this.containerScrolledDown =
-      event.target.scrollTop == event.target.scrollHeight - event.target.clientHeight
+      Math.round(event.target.scrollTop) == event.target.scrollHeight - event.target.clientHeight
   }
 
 

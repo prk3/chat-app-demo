@@ -30540,7 +30540,7 @@ var Conversation = function (_React$Component) {
   }, {
     key: 'handleScroll',
     value: function handleScroll(event) {
-      this.containerScrolledDown = event.target.scrollTop == event.target.scrollHeight - event.target.clientHeight;
+      this.containerScrolledDown = Math.round(event.target.scrollTop) == event.target.scrollHeight - event.target.clientHeight;
     }
   }, {
     key: 'render',
