@@ -1,0 +1,50 @@
+{
+  "name": "chat-app-demo",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "lodash": "^4.17.4",
+    "mysql": "^2.15.0",
+    "socketio": "^1.0.0"
+  },
+  "scripts": {
+    "server": "node src/server/server.js",
+    "migrations": "node src/server/migrations.js",
+    "build": "gulp 'compile-client'",
+    "test": "ava **/*.test.js",
+    "test-watch": "ava **/*.test.js --watch",
+    "test-client": "ava src/client/**/*.test.js",
+    "test-server": "ava src/server/**/*.test.js",
+    "test-client-watch": "ava src/client/**/*.test.js --watch",
+    "test-server-watch": "ava src/server/**/*.test.js --watch"
+  },
+  "devDependencies": {
+    "ava": "^0.23.0",
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "babelify": "^8.0.0",
+    "browserify": "^14.5.0",
+    "gulp": "^3.9.1",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
+    "vinyl-source-stream": "^1.1.0",
+    "webpack": "^3.8.1"
+  },
+  "ava": {
+    "require": [
+      "babel-register"
+    ],
+    "babel": "inherit"
+  }
+}
